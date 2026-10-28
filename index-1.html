@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171714">
+  <meta name="description" content="ISNESS explores Vedanta, consciousness, philosophy, and the timeless question of being. Ancient wisdom. Modern inquiry.">
+  <meta property="og:title" content="ISNESS — Explore the nature of being">
+  <meta property="og:description" content="Ancient wisdom. Modern inquiry. The timeless question of being.">
+  <title>ISNESS — Explore the nature of being</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#171714;--paper:#f3efe6;--muted:#b8b1a4;--line:rgba(243,239,230,.18);--accent:#c7ad82}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--ink);color:var(--paper);font-family:"DM Sans",sans-serif;line-height:1.65}
+    a{color:inherit}
+    .wrap{width:min(1120px,calc(100% - 44px));margin:auto}
+    header{border-bottom:1px solid var(--line)}
+    .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .wordmark{font-family:"Playfair Display",serif;font-size:1.6rem;letter-spacing:.18em;text-decoration:none}
+    .navlinks{display:flex;gap:25px;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+    .navlinks a{text-decoration:none;color:#d1cabc}
+    .navlinks a:hover,.text-link:hover{color:var(--accent)}
+    .hero{padding:100px 0 90px;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;width:430px;height:430px;border:1px solid rgba(199,173,130,.22);border-radius:50%;right:-120px;top:80px;box-shadow:0 0 0 45px rgba(199,173,130,.025),0 0 0 95px rgba(199,173,130,.02);pointer-events:none}
+    .eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.22em;color:var(--accent);font-weight:600}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:400;line-height:1.12}
+    h1{font-size:clamp(3.2rem,8vw,6.8rem);max-width:820px;letter-spacing:-.045em;margin:24px 0}
+    h1 em{font-weight:400;color:var(--accent)}
+    .hero-copy{font-size:1.08rem;color:#d0cabe;max-width:520px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:49px;padding:0 20px;text-decoration:none;font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;border:1px solid var(--paper);transition:.2s}
+    .button.primary{background:var(--paper);color:var(--ink)}
+    .button:hover{transform:translateY(-2px);border-color:var(--accent)}
+    .button.secondary{border-color:var(--line);color:var(--paper)}
+    .hero-note{margin-top:64px;color:var(--muted);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase}
+    .section{padding:86px 0;border-top:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:start;margin-bottom:42px}
+    h2{font-size:clamp(2.2rem,4.5vw,4rem);margin:12px 0}
+    .section-intro{color:#c9c2b6;max-width:490px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{padding:27px 24px;border:1px solid var(--line);min-height:245px;display:flex;flex-direction:column}
+    .num{color:var(--accent);font-size:.72rem;letter-spacing:.15em}
+    .card h3{font-size:1.65rem;margin:32px 0 12px}
+    .card p{font-size:.91rem;color:#c9c2b6;margin-bottom:0}
+    .statement{background:var(--paper);color:var(--ink);padding:75px 0}
+    .statement .eyebrow{color:#806b4b}
+    .statement blockquote{font-family:"Playfair Display",Georgia,serif;font-size:clamp(2rem,5vw,4.4rem);line-height:1.18;letter-spacing:-.025em;margin:20px 0;max-width:900px}
+    .statement p{max-width:560px;color:#5e584e}
+    .essays{display:grid;grid-template-columns:1fr 1fr;gap:0 36px}
+    .essay{padding:24px 0;border-top:1px solid var(--line)}
+    .essay small{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.68rem}
+    .essay h3{font-size:1.45rem;margin:10px 0}
+    .essay p{color:#c9c2b6;font-size:.9rem;margin-bottom:0}
+    .newsletter{background:#201f1a;padding:50px;border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+    .newsletter h2{font-size:clamp(2rem,4vw,3.2rem)}
+    .newsletter p{color:#c9c2b6;margin-bottom:0}
+    .signup{display:flex;gap:10px;flex-wrap:wrap}
+    .signup input{min-width:0;flex:1;background:transparent;border:1px solid #5a554a;color:var(--paper);padding:14px;font:inherit}
+    .signup button{background:var(--paper);border:0;padding:0 18px;min-height:50px;color:var(--ink);font:inherit;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+    .form-note{font-size:.76rem;color:var(--muted);margin-top:12px}
+    footer{padding:32px 0 42px;color:var(--muted);font-size:.78rem}
+    .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:25px}
+    .text-link{text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:3px}
+    @media(max-width:760px){
+      .wrap{width:min(100% - 32px,600px)}
+      .nav{min-height:70px}
+      .navlinks{gap:13px;font-size:.65rem}
+      .navlinks a:nth-child(2){display:none}
+      .hero{padding:76px 0 62px}
+      .hero:after{width:260px;height:260px;right:-180px;top:125px}
+      .hero-copy{font-size:1rem}
+      .hero-note{margin-top:45px;line-height:2}
+      .section{padding:64px 0}
+      .section-head{grid-template-columns:1fr;gap:10px}
+      .grid{grid-template-columns:1fr}
+      .card{min-height:auto;padding:23px}
+      .card h3{margin:20px 0 10px}
+      .statement{padding:58px 0}
+      .essays{grid-template-columns:1fr}
+      .newsletter{grid-template-columns:1fr;padding:26px 22px}
+      .signup{flex-direction:column}
+      .signup button{min-height:48px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="wordmark" href="#" aria-label="ISNESS home">ISNESS</a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#explore">Explore</a><a href="#essays">Ideas</a><a href="#newsletter">Stay curious</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">A space for deeper questions</div>
+        <h1>What are you, beneath everything you <em>think</em> you are?</h1>
+        <p class="hero-copy">Ancient wisdom. Modern inquiry. The timeless question of being. ISNESS explores Vedanta, consciousness, and philosophy for curious minds living in a complicated world.</p>
+        <div class="actions">
+          <a class="button primary" href="#explore">Explore the ideas <span aria-hidden="true">&nbsp;↗</span></a>
+          <a class="button secondary" href="#newsletter">Join the letter</a>
+        </div>
+        <div class="hero-note">VEDANTA &nbsp;·&nbsp; CONSCIOUSNESS &nbsp;·&nbsp; REALITY &nbsp;·&nbsp; THE SELF</div>
+      </div>
+    </section>
+    <section class="section" id="explore">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">The inquiry</div><h2>Look closer.<br>Think deeper.</h2></div>
+          <p class="section-intro">Some questions do not become smaller when we answer them. They open into larger ones. ISNESS is a home for thoughtful explorations of what it means to know, to experience, and to be.</p>
+        </div>
+        <div class="grid">
+          <article class="card"><div class="num">01 / VEDANTA</div><h3>The self beyond the story</h3><p>Explore Atman, Brahman, Maya, and self-knowledge through clear explanations rooted in India's philosophical traditions.</p></article>
+          <article class="card"><div class="num">02 / CONSCIOUSNESS</div><h3>The mystery of experience</h3><p>Ask what consciousness is, how it relates to the brain, and why subjective experience remains such a profound question.</p></article>
+          <article class="card"><div class="num">03 / PHILOSOPHY</div><h3>How should we live?</h3><p>Consider freedom, identity, attention, meaning, and the assumptions quietly shaping everyday life.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="statement">
+      <div class="wrap">
+        <div class="eyebrow">A thought to begin with</div>
+        <blockquote>“Perhaps the deepest journey is not toward becoming someone else, but toward seeing clearly what is here.”</blockquote>
+        <p>Not an answer to accept blindly. An invitation to look for yourself.</p>
+      </div>
+    </section>
+    <section class="section" id="essays">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">The reading room</div><h2>Ideas worth<br>sitting with.</h2></div>
+          <p class="section-intro">A growing collection of essays, reading notes, and questions at the meeting point of ancient philosophy and modern life.</p>
+        </div>
+        <div class="essays">
+          <article class="essay"><small>Vedanta · A beginning</small><h3>What does it mean to know yourself?</h3><p>Beyond personality, biography, and the labels we inherit: an introduction to self-inquiry.</p></article>
+          <article class="essay"><small>Consciousness · Open question</small><h3>Is consciousness more than the brain?</h3><p>What neuroscience can explain, what philosophy debates, and where honest uncertainty begins.</p></article>
+          <article class="essay"><small>Attention · Everyday life</small><h3>The cost of never being here</h3><p>How constant input changes our attention—and why a little silence can matter.</p></article>
+          <article class="essay"><small>Philosophy · The examined life</small><h3>Are you choosing, or simply reacting?</h3><p>A reflection on habit, freedom, and the hidden forces behind our decisions.</p></article>
+        </div>
+        <p style="margin-top:26px;color:var(--muted);font-size:.82rem">These are planned essay topics. Add links here when your articles are published.</p>
+      </div>
+    </section>
+    <section class="section" id="newsletter">
+      <div class="wrap">
+        <div class="newsletter">
+          <div><div class="eyebrow">The ISNESS letter</div><h2>Stay curious.</h2><p>Occasional notes on Vedanta, consciousness, and the examined life. No noise—just ideas worth considering.</p></div>
+          <div>
+            <!-- Replace the action URL with your own Formspree endpoint or connect this form to a mailing-list service. -->
+            <form class="signup" id="signup-form">
+              <label for="email" style="position:absolute;left:-9999px">Email address</label>
+              <input type="email" id="email" name="email" placeholder="Your email address" autocomplete="email" required>
+              <button type="submit">Join the letter ↗</button>
+            </form>
+            <div class="form-note" id="form-note">Demo form: connect a form service before publishing to collect sign-ups.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap foot"><div><span class="wordmark" style="font-size:1rem">ISNESS</span><div style="margin-top:8px">A space for the timeless question of being.</div></div><div>Independent inquiry. Open-minded exploration.<br>© <span id="year"></span> ISNESS</div></div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("signup-form").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("form-note").textContent = "Thanks for your interest. This demo form is not connected yet—please connect a form service before collecting emails.";
+    });
+  </script>
+</body>
+</html>
